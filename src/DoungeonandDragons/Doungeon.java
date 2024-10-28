@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Doungeon {
     public static void main(String [] args){
-        int hp = 15;
-        int hpEnemy = 10;
+        Entity enemy = new Entity(20, 2);
+        Entity player = new Entity(30,3);
         boolean isRunning = true;
         while (isRunning){
             Scanner scanner = new Scanner(System.in);
@@ -15,10 +15,10 @@ public class Doungeon {
                     isRunning = false;
                     break;
                 case "a":
-                     hpEnemy -= 1;
-                     System.out.println(hpEnemy);
+                    player.Damage(enemy);
+                    System.out.println(enemy.getHp());
             }
-            if (hpEnemy <= 0){
+            if (enemy.isDead()){
                 System.out.println("Enemy is Dead");
                 isRunning = false;
             }
