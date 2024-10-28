@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Doungeon {
     public static void main(String [] args){
-        Entity enemy = new Entity(20, 2);
-        Entity player = new Entity(30,3);
+        Entity enemy = new Entity(100, 50, 2);
+        Entity player = new Player(100,50, 5);
         boolean isRunning = true;
         while (isRunning){
             Scanner scanner = new Scanner(System.in);
