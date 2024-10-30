@@ -1,6 +1,6 @@
 package DoungeonandDragons;
 
-public class Entity {
+public class Entity extends GameObject implements move {
     private int level;
     private Stats stats;
     public int getLevel() {
@@ -26,5 +26,11 @@ public class Entity {
     public boolean isDead() {
         return stats.getHealth() <= 0;
     }
+
+    @Override
+    public Position move(Position vector) {
+
+        return null;
     }
+}
 

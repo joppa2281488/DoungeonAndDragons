@@ -7,6 +7,11 @@ public class Mage extends Player {
 
     }
 
+    @Override
+    public String toString() {
+        return "Mage";
+    }
+
     public  void FireBoll(Entity enemy) {
         Damage damage = new Damage(0,50);
         super.Damage(enemy,damage);
